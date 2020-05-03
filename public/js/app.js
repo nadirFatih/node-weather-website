@@ -1,5 +1,7 @@
-
-console.log('Client Side JavaScript file is loaded!!');
+const weatherForm = document.querySelector('form');
+const search = document.querySelector('input');
+const messageOne = document.querySelector('#message-1');
+const messageTwo = document.querySelector('#message-2');
 
 fetch('http://puzzle.mead.io/puzzle').then((response)=>{
     response.json().then((data)=>{
@@ -19,12 +21,6 @@ fetch('http://localhost:3000/weather?address=Boston').then((response)=>{
         
     })
 })
-
-const weatherForm = document.querySelector('form');
-const search = document.querySelector('input');
-const messageOne = document.querySelector('#message-1');
-const messageTwo = document.querySelector('#message-2');
-
 
 weatherForm.addEventListener('submit',(e)=>{
     e.preventDefault();
